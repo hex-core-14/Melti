@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Add to app/globals.css */
+:root {
+  --bg-page: #120b06;
+  --bg-page-radial: radial-gradient(circle at 50% 10%, #28150b 0%, #120b06 70%);
+  --bg-card: linear-gradient(160deg, #24140c 0%, #150c07 100%);
+  --bg-stage: radial-gradient(circle at 50% 45%, #2e190e 0%, #130a06 85%);
+  --bg-glass: rgba(255, 248, 240, 0.045);
+  --bg-nav-scrolled: rgba(18, 11, 6, 0.84);
+
+  --text-primary: #fff8f0;
+  --text-secondary: rgba(235, 197, 147, 0.78);
+  --text-accent: #ebc593;
+  --gold-solid: #d4a373;
+  --terracotta: #c86d51;
+
+  --border-subtle: rgba(212, 163, 115, 0.24);
+  --border-strong: rgba(235, 197, 147, 0.52);
+
+  --btn-primary-bg: linear-gradient(135deg, #ebc593 0%, #d4a373 60%, #b9824f 100%);
+  --btn-primary-text: #1a120b;
+
+  --shadow-card: 0 24px 56px rgba(0, 0, 0, 0.55);
+}
+
+:root[data-theme='light'] {
+  --bg-page: #faf2e6;
+  --bg-page-radial: radial-gradient(circle at 50% 10%, #fffbf5 0%, #efe0cc 75%);
+  --bg-card: linear-gradient(160deg, #fffdf9 0%, #f4e6d3 100%);
+  --bg-stage: radial-gradient(circle at 50% 45%, #f7ead8 0%, #e8d5bc 88%);
+  --bg-glass: rgba(36, 19, 11, 0.045);
+  --bg-nav-scrolled: rgba(250, 242, 230, 0.88);
+
+  --text-primary: #1e1109;
+  --text-secondary: #5c3d2e;
+  --text-accent: #8c5327;
+  --gold-solid: #9e5e2b;
+  --terracotta: #b8563a;
+
+  --border-subtle: rgba(140, 83, 39, 0.22);
+  --border-strong: rgba(140, 83, 39, 0.48);
+
+  --btn-primary-bg: linear-gradient(135deg, #2d180e 0%, #1a0e08 100%);
+  --btn-primary-text: #fff8f0;
+
+  --shadow-card: 0 18px 42px rgba(43, 24, 16, 0.11);
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  transition: background-color 0.45s ease, color 0.45s ease;
+}
